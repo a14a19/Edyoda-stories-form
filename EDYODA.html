@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edyoda Stories</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            transition: all 0.2s;
+        }
+        body {
+            background-color: #efefef;
+            font-family: 'Raleway', sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            box-shadow: 0 0 5px black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .logo {
+            width: 130px;
+            font-size: 32px;
+            color: #0084ff;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .logo-stories {
+            margin: 0;
+            font-weight: 500;
+            font-family: 'Raleway', sans-serif;
+            font-style: italic;
+            cursor: pointer;
+        }
+        .headr-rt {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 78px;
+
+        }
+        .headr-lt {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .left-text {
+            margin-right: 20px;
+            width: 355px;
+        }
+        button {
+            margin: 5px;
+            padding: 6px 14px;
+            width: auto;
+            border-radius: 15px;
+            background-color: #fff;
+            color: #0084ff;
+            font-size: 12px;
+            border: 1px solid #0084ff;
+        }
+        button:hover {
+            background-color: #0084ff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .btn button {
+            padding: 8px 24px;
+        }
+        .btn {
+            padding: 16px 78px 16px 0;
+        }
+        .drop-down {
+            margin-left: 15px;
+        }
+        .dropdown-list {
+            border: 0 solid grey;
+            padding-left: 8px;
+            margin-top: 0;
+            cursor: pointer;
+        }
+        .dropdown-list::placeholder {
+            color: black;  
+            font-size: 14px;
+            border: 0 solid white;
+            /* doesn't work with all browsers */
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 6% 16%;
+        }
+        .trending {
+            font-size: 28px;
+            padding-top: 16px;
+            margin-bottom: 10px;
+            /* position: sticky;
+            top: 12%; */
+        }
+        .trending-img {
+            display: flex;
+            justify-content: space-between;
+        }
+        .trending-img img {
+            border-radius: 15px;
+            margin: 6px;
+        }
+        .trending-img img:hover {
+            cursor: pointer;
+            border: 2px solid #0096ff;
+        }
+        .sub-trnd-img img {
+            width: 650px;
+        }
+        .trnd-img-1  {
+            height: 170px;
+        }
+        .trnd-img-2 {
+            height: 140px;
+        }
+        .category-container {
+            margin-bottom: 20px;
+            font-size: 16px;
+            padding-top: 16px;
+            /* position: sticky;
+            top: 12%; */
+        }
+        .category-heading {
+            color: #000;
+            font-weight: 600;
+            margin: 0;
+            display: flex;
+            justify-content: left;
+        }
+        .filter-text {
+            font-size: 14px;
+            margin-left: 8px;
+            font-weight: 600;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .items {
+            flex-basis: 33.3%;
+            flex-shrink: 1;
+            height: 425px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 0.1px solid #0096ff;
+            box-shadow: 0 0 10px #0095ff4f;
+            cursor: pointer;
+            overflow: auto;
+        }
+        .padding {
+            /* display: flex; */
+            padding: 25px;
+            width: 33.3%;
+        }
+        .img img {
+            height: 176px;
+            width: 100%;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        .sub-section {
+            margin: 4px 0;
+            color: rgba(0, 0, 0, 0.6);
+            line-height: 1.43;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        .text-section {
+            padding: 10px 24px;
+            display: flex;
+            flex-direction: column;
+        }
+        .author-container {
+            padding-top: 4px;
+            align-items: center;
+            display: flex;
+        }
+        .author-container h3 {
+            color: #0096ff;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 500;
+            margin-right: 6px;
+            padding-right: 6px;
+            border-right: 1px solid rgba(0, 0, 0, 0.7);
+        }
+        .author-container p {
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 14px;
+            font-weight: 300;
+        }
+        footer {
+            background-color: #172146;
+            padding: 80px 16%;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 0 10px black;
+            color: whitesmoke;
+            line-height: 2;
+            font-size: 13px;
+        }
+        footer ul {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+        footer a {
+            text-decoration: none;
+            color: #fff;
+        }
+        footer h3 {
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .s-icon {
+            font-size: 20px;
+            margin: auto 5px;
+        }
+        .email-phone {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+        .copyrt {
+            line-height: normal;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="headr-rt">
+            <div class="headr-logo">
+                <h1 class="logo">Edyoda</h1>
+                <div class="logo-stories">Stories</div>
+            </div>
+            <div class="drop-down">
+                <!-- <label for="datalist">Explore Categories</label> -->
+                <input type="list" list="datalist" class="dropdown-list" placeholder="Explore Categories">
+                <datalist id="datalist" name="Explore Categories" class="">
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                    <option value="DevOps">DevOps</option>
+                </datalist>    
+            </div>
+        </div>
+        <div class="headr-lt">
+            <div class="left-text">
+                EdYoda is free learning and knowledge sharing platform for techies
+            </div>
+            <div class="btn">
+                <button>Go To Main Website</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <aside>
+            <h3 class="trending">
+                Trending Posts
+            </h3>
+            <div class="trending-img">
+                <div class="sub-trnd-img">
+                    <img src="https://www.betterup.com/hubfs/Imported_Blog_Media/informational%20interview%20blog%20image-1.png" alt="Image">
+                </div>
+                <div>
+                    <img src="https://miro.medium.com/max/1400/1*QuSCpw0OyxoJpsGs75Q4ng.jpeg" alt="Image" class="trnd-img-1">
+                    <img src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_cloud_computing_70own2G.jpeg" alt="Image" class="trnd-img-2">
+                </div>
+            </div>
+        </aside>
+
+        <nav class="category-container">
+            <div class="category-heading">
+                <div>
+                    <i class="fa-solid fa-filter"></i>
+                </div>    
+                <h3 class="filter-text">
+                    Filter by Category 
+                </h3>
+            </div>
+            <div>
+                <button>
+                    All
+                </button>
+                <button>
+                    Artificial Intelligence 
+                </button>
+                <button>
+                    Cloud Computing
+                </button>
+                <button>
+                    DevOps
+                </button>
+                <button>
+                    Programming Language
+                </button>
+                <button>
+                    Mobile Application Development
+                </button>
+                <button>
+                    Technology and Tools
+                </button>
+                <button>
+                    Get a Job in a Tech Company
+                </button>
+                <button>
+                    Others
+                </button>
+            </div>
+        </nav>
+
+        <section>
+            <div class="padding">
+                <div class="items">
+                    <div class="img">
+                        <img src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online.png" alt="Image">
+                    </div>
+                    <div class="text-section">
+                        <h3 class="title">Introducing To A Machine Learning Online Course </h3>
+                        <div class="author-container">
+                            <h3>
+                                Edyoda
+                            </h3>
+                            <p>
+                                23 Aug 2022
+                            </p>
+                        </div>
+                        <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error! Vel vero quisquam velit nam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="padding">
+                <div class="items">
+                    <div class="img">
+                        <img src="https://edyoda.s3.amazonaws.com/media/blog-images/6.png" alt="Image">
+                    </div>
+                    <div class="text-section">
+                        <h3 class="title">LAMP Stack vs MEAN Stack: Choose right platform</h3>
+                        <div class="author-container">
+                            <h3>
+                                Edyoda
+                            </h3>
+                            <p>
+                                23 Aug 2022
+                            </p>
+                        </div>
+                        <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="padding">
+                <div class="items">
+                    <div class="img">
+                        <img src="https://edyoda.s3.amazonaws.com/media/blog-images/4.png" alt="Image">
+                    </div>
+                    <div class="text-section">
+                        <h3 class="title"> Impact of Cloud Computing on various industries </h3>
+                        <div class="author-container">
+                            <h3>
+                                Edyoda
+                            </h3>
+                            <p>
+                                23 Aug 2022
+                            </p>
+                        </div>
+                        <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="padding">
+                <div class="items">
+                    <div class="img">
+                        <img src="https://edyoda.s3.amazonaws.com/media/blog-images/3.png" alt="Image">
+                    </div>
+                    <div class="text-section">
+                        <h3 class="title">Challenges of Machine Learning in Big Data Analytics</h3>
+                        <div class="author-container">
+                            <h3>
+                                Edyoda
+                            </h3>
+                            <p>
+                                23 Aug 2022
+                            </p>
+                        </div>
+                        <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error! Vel vero quisquam velit nam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="padding">
+                <div class="items">
+                    <div class="img">
+                        <img src="https://edyoda.s3.amazonaws.com/media/blog-images/5.png" alt="Image">
+                    </div>
+                    <div class="text-section">
+                        <h3 class="title">Breaking the myths of Cybersecurity</h3>
+                        <div class="author-container">
+                            <h3>
+                                Edyoda
+                            </h3>
+                            <p>
+                                23 Aug 2022
+                            </p>
+                        </div>
+                        <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, </p>
+                    </div>
+                </div>
+            </div>
+            <div class="padding">
+                <div class="items">
+                    <div class="img">
+                        <img src="https://edyoda.s3.amazonaws.com/media/blog-images/7.png" alt="Image">
+                    </div>
+                    <div class="text-section">
+                        <h3 class="title">Importance of Data Backup and Recovery in the IT industries</h3>
+                        <div class="author-container">
+                            <h3>
+                                Edyoda
+                            </h3>
+                            <p>
+                                23 Aug 2022
+                            </p>
+                        </div>
+                        <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error! Vel vero quisquam velit nam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="padding">
+                <div class="items">
+                    <div class="img">
+                        <img src="https://edyoda.s3.amazonaws.com/media/blog-images/automation-testing-an-overview-2.png" alt="Image">
+                    </div>
+                    <div class="text-section">
+                        <h3 class="title">What is Web Scraping?</h3>
+                        <div class="author-container">
+                            <h3>
+                                Edyoda
+                            </h3>
+                            <p>
+                                23 Aug 2022
+                            </p>
+                        </div>
+                        <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error! Vel vero quisquam velit nam.</p>
+                    </div>
+                </div>
+            </div>  
+            <div class="padding">
+                <div class="items">
+                    <div class="img">
+                        <img src="https://edyoda.s3.amazonaws.com/media/blog-images/what_is_isa_blog_1.png" alt="Image">
+                    </div>
+                    <div class="text-section">
+                        <h3 class="title">What is Income Sharing Agreement?</h3>
+                        <div class="author-container">
+                            <h3>
+                                Edyoda
+                            </h3>
+                            <p>
+                                23 Aug 2022
+                            </p>
+                        </div>
+                        <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error! Vel vero quisquam velit nam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="padding">
+                <div class="items">
+                    <div class="img">
+                        <img src="https://edyoda.s3.amazonaws.com/media/blog-images/practical_machine_learning_1.png" alt="Image">
+                    </div>
+                    <div class="text-section">
+                        <h3 class="title">Practical Machine Learning with Python and Keras</h3>
+                        <div class="author-container">
+                            <h3>
+                                Edyoda
+                            </h3>
+                            <p>
+                                23 Aug 2022
+                            </p>
+                        </div>
+                        <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error! Vel vero quisquam velit nam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <ul>
+                <h3>EDYODA</h3>
+                <li>About Us</li>
+                <li>Contat Us</li>
+                <li>Terms of Use</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <h3>Resources</h3>
+                <li>Learning Path</li>
+                <li>Courses</li>
+                <li>Learning Videos</li>
+                <li>Educators</li>
+                <li>Edyoda Stories</li>
+                <li>University</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <h3>For enterprises</h3>
+                <li>Train Your Employees</li>
+            </ul>
+            <ul>
+                <h3>Quick links</h3>
+                <li>Learn and Earn</li>
+                <li>Request New Topic</li>
+                <li>Certifications</li>
+                <li>Affiliate Progam </li>
+            </ul>
+        </div>
+
+        <div  class="social">
+
+            <ul>
+                <h3>Connect</h3>
+
+                <li> <span class="email-phone"><i class="fa-solid fa-envelope"></i> </span>
+                    <a href="mailto:hello@edyoda.com">hello@edyoda.com</a> </li>
+                <li> <span class="email-phone"><i class="fa-solid fa-phone"></i></span> 
+                    <a href="tel:02071173661" class="">02071173661</a> </li>
+                <li>
+
+                    <a class="s-icon" href="https://www.google.com/maps/place/EdYoda+(zekeLabs+Technologies+Private+Limited)/@12.9671441,77.7165631,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae12256340d8a7:0xc9c6dfb48a7eeadd!8m2!3d12.9671912!4d77.7165756" target="_blank">  
+                        <i class="fa-solid fa-location-dot"></i>
+                    </a>
+
+                    <a class="s-icon" href="https://twitter.com/EdYodaHQ" target="_blank" >
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    
+                    <a class="s-icon" href="https://www.linkedin.com/company/edyoda/?originalSubdomain=in" target="_blank">  
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a class="s-icon" href="https://en-gb.facebook.com/edYoda.here/" target="_blank">  
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    
+                </li>
+                <li> <div class="copyrt">&copy; 2022</div> Edyoda Stories By Anas Ahmed</li>
+            </ul>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
