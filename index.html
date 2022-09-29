@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Edyoda Stories</title>
+
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
         * {
             margin: 0;
             box-sizing: border-box;
@@ -36,11 +33,11 @@
             width: 100%;
         }
         .logo {
-            width: 130px;
             font-size: 32px;
             color: #0084ff;
             text-transform: uppercase;
             cursor: pointer;
+            font-weight: 700;
         }
         .logo-stories {
             margin: 0;
@@ -51,104 +48,96 @@
         }
         .headr-rt {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
-            padding: 16px 78px;
+            padding: 8px 30px;
+            width: 50%;
 
         }
         .headr-lt {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
+            width: 50%;
         }
         .left-text {
             margin-right: 20px;
-            width: 355px;
         }
-        button {
-            margin: 5px;
+        .btn button {
             padding: 6px 14px;
-            width: auto;
+            width: 50%;
+            min-width: 120px;
             border-radius: 15px;
             background-color: #fff;
             color: #0084ff;
             font-size: 12px;
             border: 1px solid #0084ff;
         }
-        button:hover {
-            background-color: #0084ff;
-            color: #fff;
-            cursor: pointer;
-        }
-        .btn button {
-            padding: 8px 24px;
-        }
         .btn {
-            padding: 16px 78px 16px 0;
-        }
-        .drop-down {
-            margin-left: 15px;
-        }
-        .dropdown-list {
-            border: 0 solid grey;
-            padding-left: 8px;
-            margin-top: 0;
-            cursor: pointer;
-        }
-        .dropdown-list::placeholder {
-            color: black;  
-            font-size: 14px;
-            border: 0 solid white;
-            /* doesn't work with all browsers */
+            padding: 8px 30px 8px 0;
         }
         main {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 6% 16%;
+            padding: 120px 2%;
         }
         .trending {
-            font-size: 28px;
+            font-size: 24px;
             padding-top: 16px;
             margin-bottom: 10px;
-            /* position: sticky;
-            top: 12%; */
         }
         .trending-img {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            flex-wrap: wrap;
         }
         .trending-img img {
             border-radius: 15px;
-            margin: 6px;
+            margin: 4px;
+            padding: 2px;
         }
         .trending-img img:hover {
             cursor: pointer;
             border: 2px solid #0096ff;
         }
-        .sub-trnd-img img {
-            width: 650px;
+        .sub-trnd-img1{
+            width: 60%;
+            min-width: 290px;
         }
-        .trnd-img-1  {
-            height: 170px;
+        .sub-trnd-img1 img {
+            width: 100%;
         }
-        .trnd-img-2 {
+        .sub-trnd-img2 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .trnd-img-1, .trnd-img-2   {
             height: 140px;
         }
         .category-container {
             margin-bottom: 20px;
             font-size: 16px;
             padding-top: 16px;
-            /* position: sticky;
-            top: 12%; */
         }
         .category-heading {
             color: #000;
             font-weight: 600;
-            margin: 0;
+            margin-bottom: 5px;
             display: flex;
             justify-content: left;
+        }
+        .category-container button {
+            padding: 6px 14px;
+            margin: 2px 0px;
+            border-radius: 15px;
+            background-color: #fff;
+            color: #0084ff;
+            font-size: 12px;
+            border: 1px solid #0084ff;
         }
         .filter-text {
             font-size: 14px;
@@ -159,29 +148,22 @@
         section {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-evenly;
+            align-items: center;
         }
         .items {
-            flex-basis: 33.3%;
-            flex-shrink: 1;
-            height: 425px;
-            margin: 10px 0;
+            width: 25%;
+            height: 375px;
+            margin: 15px 10px;
             border-radius: 5px;
             border: 0.1px solid #0096ff;
             box-shadow: 0 0 10px #0095ff4f;
             cursor: pointer;
             overflow: auto;
-        }
-        .padding {
-            /* display: flex; */
-            padding: 25px;
-            width: 33.3%;
+            min-width: 270px;
         }
         .img img {
-            height: 176px;
             width: 100%;
-            border-top-right-radius: 5px;
-            border-top-left-radius: 5px;
         }
         .sub-section {
             margin: 4px 0;
@@ -189,6 +171,12 @@
             line-height: 1.43;
             font-weight: 400;
             font-size: 14px;
+            text-overflow:ellipsis;
+            overflow:hidden;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            white-space: normal;
         }
         .text-section {
             padding: 10px 24px;
@@ -216,9 +204,9 @@
         }
         footer {
             background-color: #172146;
-            padding: 80px 16%;
+            padding: 50px 5%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             box-shadow: 0 0 10px black;
             color: whitesmoke;
             line-height: 2;
@@ -249,6 +237,26 @@
             line-height: normal;
             margin-top: 15px;
         }
+        button:hover {
+            background-color: #0084ff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media(max-width: 700px){
+            .headr-rt{
+                padding: 8px 15px;
+            }
+            .left-text{
+                display: none;
+            }
+            .btn{
+                padding: 0%;
+            }
+            footer{
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -258,15 +266,7 @@
                 <h1 class="logo">Edyoda</h1>
                 <div class="logo-stories">Stories</div>
             </div>
-            <div class="drop-down">
-                <!-- <label for="datalist">Explore Categories</label> -->
-                <input type="list" list="datalist" class="dropdown-list" placeholder="Explore Categories">
-                <datalist id="datalist" name="Explore Categories" class="">
-                    <option value="Artificial Intelligence">Artificial Intelligence</option>
-                    <option value="Cloud Computing">Cloud Computing</option>
-                    <option value="DevOps">DevOps</option>
-                </datalist>    
-            </div>
+           
         </div>
         <div class="headr-lt">
             <div class="left-text">
@@ -284,10 +284,10 @@
                 Trending Posts
             </h3>
             <div class="trending-img">
-                <div class="sub-trnd-img">
+                <div class="sub-trnd-img1">
                     <img src="https://www.betterup.com/hubfs/Imported_Blog_Media/informational%20interview%20blog%20image-1.png" alt="Image">
                 </div>
-                <div>
+                <div class="sub-trnd-img2">
                     <img src="https://miro.medium.com/max/1400/1*QuSCpw0OyxoJpsGs75Q4ng.jpeg" alt="Image" class="trnd-img-1">
                     <img src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_cloud_computing_70own2G.jpeg" alt="Image" class="trnd-img-2">
                 </div>
@@ -335,7 +335,6 @@
         </nav>
 
         <section>
-            <div class="padding">
                 <div class="items">
                     <div class="img">
                         <img src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online.png" alt="Image">
@@ -353,9 +352,7 @@
                         <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error! Vel vero quisquam velit nam.</p>
                     </div>
                 </div>
-            </div>
 
-            <div class="padding">
                 <div class="items">
                     <div class="img">
                         <img src="https://edyoda.s3.amazonaws.com/media/blog-images/6.png" alt="Image">
@@ -373,9 +370,7 @@
                         <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, </p>
                     </div>
                 </div>
-            </div>
 
-            <div class="padding">
                 <div class="items">
                     <div class="img">
                         <img src="https://edyoda.s3.amazonaws.com/media/blog-images/4.png" alt="Image">
@@ -393,9 +388,7 @@
                         <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error!</p>
                     </div>
                 </div>
-            </div>
 
-            <div class="padding">
                 <div class="items">
                     <div class="img">
                         <img src="https://edyoda.s3.amazonaws.com/media/blog-images/3.png" alt="Image">
@@ -413,9 +406,7 @@
                         <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error! Vel vero quisquam velit nam.</p>
                     </div>
                 </div>
-            </div>
 
-            <div class="padding">
                 <div class="items">
                     <div class="img">
                         <img src="https://edyoda.s3.amazonaws.com/media/blog-images/5.png" alt="Image">
@@ -433,8 +424,7 @@
                         <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, </p>
                     </div>
                 </div>
-            </div>
-            <div class="padding">
+
                 <div class="items">
                     <div class="img">
                         <img src="https://edyoda.s3.amazonaws.com/media/blog-images/7.png" alt="Image">
@@ -452,8 +442,7 @@
                         <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error! Vel vero quisquam velit nam.</p>
                     </div>
                 </div>
-            </div>
-            <div class="padding">
+
                 <div class="items">
                     <div class="img">
                         <img src="https://edyoda.s3.amazonaws.com/media/blog-images/automation-testing-an-overview-2.png" alt="Image">
@@ -471,8 +460,7 @@
                         <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error! Vel vero quisquam velit nam.</p>
                     </div>
                 </div>
-            </div>  
-            <div class="padding">
+
                 <div class="items">
                     <div class="img">
                         <img src="https://edyoda.s3.amazonaws.com/media/blog-images/what_is_isa_blog_1.png" alt="Image">
@@ -490,8 +478,7 @@
                         <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error! Vel vero quisquam velit nam.</p>
                     </div>
                 </div>
-            </div>
-            <div class="padding">
+
                 <div class="items">
                     <div class="img">
                         <img src="https://edyoda.s3.amazonaws.com/media/blog-images/practical_machine_learning_1.png" alt="Image">
@@ -509,7 +496,7 @@
                         <p class="sub-section"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempore amet obcaecati, rerum, porro quis minus adipisci corrupti hic, repellendus illo animi est optio error! Vel vero quisquam velit nam.</p>
                     </div>
                 </div>
-            </div>
+
         </section>
     </main>
 
