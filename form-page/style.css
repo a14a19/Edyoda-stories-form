@@ -4,6 +4,7 @@
 }
 body {
     background-color: #f2f6ff;
+    height: 100vh;
 }
 header {
     background-color: whitesmoke;
@@ -11,15 +12,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
-    padding: 10px 20px;
 }
 .logo {
-    margin: auto 10px auto 30px;
+    margin: auto 8px auto 30px;
 }
 .logo a {
     font-weight: 900;
-    font-size: 36px;
+    font-size: 32px;
     color: blue;
     cursor: pointer;
     text-decoration: none;
@@ -27,8 +26,7 @@ header {
 .right-menu {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
-    font-size: 19px;
+    font-size: 18px;
 }
 .bell-icon {
     padding: 10px;
@@ -36,12 +34,12 @@ header {
 }
 .badge {
     position: absolute;
-    top: -2px;
-    right: 1px;
+    top: 1.5px;
+    right: 2px;
 }
 .badge img {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     position: absolute;
     top: 5px;
@@ -51,22 +49,35 @@ header {
     margin: 5px;
     cursor: pointer;
 }
-.avatar {
-    padding: 10px;
-}
 .avatar img {
     height: 40px;
     border-radius: 50%;
+    margin-right: 30px;
 }
 .main-body {
     display: flex;
+    height: 100%;
 }
 .side-nav {
     background-color: #15294b;
     color: #fff;
+    padding-top: 15px;
 }
 .side-nav div {
-    margin: 25px;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.side-nav div:hover {
+    background: #fff;
+    color: #15294b;
+    cursor: pointer;
+}
+.sn-icon {
+    font-size: 36px;
+    margin-bottom: 5px;
 }
 main {
     display: flex;
@@ -76,11 +87,11 @@ main {
     margin-bottom: 30px;
     min-width: 90%;
 }
-main .form-containter {
+.form-containter {
     background-color: whitesmoke;
     border-radius: 8px;
     padding: 20px;
-    width: 50%;
+    width: 60%;
     box-shadow: 0 0 10px lightgray;
 }
 .menu {
@@ -91,17 +102,35 @@ main .form-containter {
 .sub-main {
     background-color: #15294b;
     color: whitesmoke;
-    padding: 25px 30px;
+    padding: 12px 30px;
     display: flex;
     justify-content: left;
     /* height: 45px; */
     align-items: center;
+    position: relative;
 }
-.sub-main details summary {
+#sub-code {
+    cursor: pointer;
+}
+.detail-opt {
+    display: none;
+}
+#detail-opt{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #15294b;
+    padding: 10px;
+}
+#detail-opt span {
+    padding: 10px 10px;
+}
+/* .sub-main details summary {
     list-style: none;
     cursor: pointer;
     margin: auto 20px;
-}
+} */
 .sub-main h3 {
     margin: auto 20px;
 }

@@ -1,5 +1,6 @@
-$(document).ready(function(){
-    $("#cross").on('click', function () {
-        console.log('FOO!');
-    }, false);
-})
+const cross = document.getElementById("cross");
+        const helpTxt = document.getElementById("help-txt")
+
+        cross.addEventListener('click', ()=>{
+            helpTxt.style.cssText = "display: none;"
+        })
