@@ -10,254 +10,7 @@
 
     <title>Edyoda Stories</title>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-        * {
-            margin: 0;
-            box-sizing: border-box;
-            transition: all 0.2s;
-        }
-        body {
-            background-color: #efefef;
-            font-family: 'Raleway', sans-serif;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            background-color: #fff;
-            box-shadow: 0 0 5px black;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-        }
-        .logo {
-            font-size: 32px;
-            color: #0084ff;
-            text-transform: uppercase;
-            cursor: pointer;
-            font-weight: 700;
-        }
-        .logo-stories {
-            margin: 0;
-            font-weight: 500;
-            font-family: 'Raleway', sans-serif;
-            font-style: italic;
-            cursor: pointer;
-        }
-        .headr-rt {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 8px 30px;
-            width: 50%;
-
-        }
-        .headr-lt {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            width: 50%;
-        }
-        .left-text {
-            margin-right: 20px;
-        }
-        .btn button {
-            padding: 6px 14px;
-            width: 50%;
-            min-width: 120px;
-            border-radius: 15px;
-            background-color: #fff;
-            color: #0084ff;
-            font-size: 12px;
-            border: 1px solid #0084ff;
-        }
-        .btn {
-            padding: 8px 30px 8px 0;
-        }
-        main {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 120px 2%;
-        }
-        .trending {
-            font-size: 24px;
-            padding-top: 16px;
-            margin-bottom: 10px;
-        }
-        .trending-img {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: flex-start;
-            flex-wrap: wrap;
-        }
-        .trending-img img {
-            border-radius: 15px;
-            margin: 4px;
-            padding: 2px;
-        }
-        .trending-img img:hover {
-            cursor: pointer;
-            border: 2px solid #0096ff;
-        }
-        .sub-trnd-img1{
-            width: 60%;
-            min-width: 290px;
-        }
-        .sub-trnd-img1 img {
-            width: 100%;
-        }
-        .sub-trnd-img2 {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-        }
-        .trnd-img-1, .trnd-img-2   {
-            height: 140px;
-        }
-        .category-container {
-            margin-bottom: 20px;
-            font-size: 16px;
-            padding-top: 16px;
-        }
-        .category-heading {
-            color: #000;
-            font-weight: 600;
-            margin-bottom: 5px;
-            display: flex;
-            justify-content: left;
-        }
-        .category-container button {
-            padding: 6px 14px;
-            margin: 2px 0px;
-            border-radius: 15px;
-            background-color: #fff;
-            color: #0084ff;
-            font-size: 12px;
-            border: 1px solid #0084ff;
-        }
-        .filter-text {
-            font-size: 14px;
-            margin-left: 8px;
-            font-weight: 600;
-        }
-
-        section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        .items {
-            width: 25%;
-            height: 375px;
-            margin: 15px 10px;
-            border-radius: 5px;
-            border: 0.1px solid #0096ff;
-            box-shadow: 0 0 10px #0095ff4f;
-            cursor: pointer;
-            overflow: auto;
-            min-width: 270px;
-        }
-        .img img {
-            width: 100%;
-        }
-        .sub-section {
-            margin: 4px 0;
-            color: rgba(0, 0, 0, 0.6);
-            line-height: 1.43;
-            font-weight: 400;
-            font-size: 14px;
-            text-overflow:ellipsis;
-            overflow:hidden;
-            display: -webkit-box !important;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-            white-space: normal;
-        }
-        .text-section {
-            padding: 10px 24px;
-            display: flex;
-            flex-direction: column;
-        }
-        .author-container {
-            padding-top: 4px;
-            align-items: center;
-            display: flex;
-        }
-        .author-container h3 {
-            color: #0096ff;
-            font-size: 14px;
-            font-style: italic;
-            font-weight: 500;
-            margin-right: 6px;
-            padding-right: 6px;
-            border-right: 1px solid rgba(0, 0, 0, 0.7);
-        }
-        .author-container p {
-            color: rgba(0, 0, 0, 0.7);
-            font-size: 14px;
-            font-weight: 300;
-        }
-        footer {
-            background-color: #172146;
-            padding: 50px 5%;
-            display: flex;
-            justify-content: space-evenly;
-            box-shadow: 0 0 10px black;
-            color: whitesmoke;
-            line-height: 2;
-            font-size: 13px;
-        }
-        footer ul {
-            list-style-type: none;
-            margin-bottom: 15px;
-        }
-        footer a {
-            text-decoration: none;
-            color: #fff;
-        }
-        footer h3 {
-            color: rgba(255, 255, 255, 0.4);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-        .s-icon {
-            font-size: 20px;
-            margin: auto 5px;
-        }
-        .email-phone {
-            margin-right: 5px;
-            font-size: 16px;
-        }
-        .copyrt {
-            line-height: normal;
-            margin-top: 15px;
-        }
-        button:hover {
-            background-color: #0084ff;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        @media(max-width: 700px){
-            .headr-rt{
-                padding: 8px 15px;
-            }
-            .left-text{
-                display: none;
-            }
-            .btn{
-                padding: 0%;
-            }
-            footer{
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -498,6 +251,19 @@
                 </div>
 
         </section>
+        
+        <aside id="help">
+            <div id="help-txt">
+                We are online! 
+                <br> 
+                Tell us how we can help.
+                <div id="triangle"></div>
+                <div id="cross"><i class="fa-solid fa-circle-xmark"></i></div>
+            </div>
+            <div id="help-icon">
+                <a href="../form-page/index.html"><i class="fa-solid fa-comments"></i></a>
+            </div>
+        </aside>
     </main>
 
     <footer>
@@ -572,5 +338,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edyoda-form</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo" title="Edyoda">
+            <a href="../main-page/index.html">EDYODA</a>
+        </div>
+        <div class="right-menu">
+            <div class="bell-icon" title="Notification">
+                <i class="fa-solid fa-bell"></i>
+                <div class="badge">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa_tUynadnA2lpw4XAeZ-21wJal4xxJXDX_A&usqp=CAU" alt="Badge">
+                    <!-- <i class="fa-solid fa-00"></i> -->
+                </div>
+            </div>
+            <div class="welcome-message" title="Profile">
+                <span>Hi! Anas Ahmed</span>
+            </div>
+            <div class="avatar" title="Profile">
+                <img src="https://i.pinimg.com/736x/ff/5a/44/ff5a447ae422e734b380c8a63e5effd6.jpg" alt="Profile Image">
+            </div>
+        </div>
+    </header>
+    <nav class="sub-main">
+        <div>
+            <details> 
+                <summary>Subject Code</summary>
+                <summary>FSR270522b</summary>
+                 <summary>ATP161220</summary>
+                 <summary>WD071120</summary>
+            </details>
+        </div>
+        <div>
+            <h3>Full Stack MERN Developer Program</h3>
+        </div>
+        <!-- <div>
+                <select name="" id="" class="menu">
+                    <option value="">
+                        none
+                    </option>
+                    <option value="">
+                        ATP161220
+                    </option>
+                    <option value="">
+                        WD071120
+                    </option>
+                    <option value="">
+                        FSR270522b
+                    </option>
+                </select>
+        </div> -->
+    </nav>
+
+<div class="main-body">  
+    
+    <nav class="side-nav">
+        <div>
+            Home
+        </div>
+        <div>
+            Module
+        </div>
+        <div>
+            Instructor
+        </div>
+        <div>
+            Certification
+        </div>
+        <div>
+            Progress
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="form-containter">
+            <h3>
+                Contact Support
+            </h3>
+            <form action="">
+                <fieldset>
+                    <legend>Support</legend>
+                <div class="form-item">
+                    <div class="label-box">
+                        <label for="name">Name<sup class="required">*</sup> </label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="text-input" id="name" name="name" autocomplete="name" placeholder="Enter Name" required autofocus>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="label-box">
+                        <label for="email">Email<sup class="required">*</sup> </label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" class="email" id="email" name="name" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="label-box">
+                        <label for="contact">Contact Number<sup class="required">*</sup> </label>
+                    </div>
+                    <div class="input-box">
+                        <input type="number" class="number" id="contact" name="name" placeholder="Contact number">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="label-box">
+                        <label for="subject">Subject<sup class="required">*</sup> </label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="text-input" id="subject" name="subject" placeholder="Subject">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="label-box">
+                        <label for="Batch">Batch<sup class="required">*</sup> </label>
+                    </div>
+                    <div class="input-box">
+                        <select name="" id="Batch" class="batch">
+                            
+                            <option value="None">
+                                None
+                            </option>
+                            <optgroup label="Frontend Batch">
+                            <option value="Batch-1">
+                                Batch 1
+                            </option>
+                            <option value="Batch-2">
+                                Batch 2
+                            </option>
+                            </optgroup>
+                            <optgroup label="Backend Batch">
+                            <option value="Batch-3">
+                                Batch 3 
+                            </option>
+                            <option value="Batch-4">
+                                Batch 4 
+                            </option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="label-box">
+                        <label for="datalist"> Category <sup class="required">*</sup> </label>
+                    </div>
+                    <div class="input-box">
+                         
+                        <input type="list" list="datalist" class="category">
+
+                        <datalist name="" id="datalist" class="category">
+                            
+                            <option value="None">
+                                None
+                            </option>
+                            <option value="payment">
+                                Payment
+                            </option>
+                            <option value="placements">
+                                Placements
+                            </option>
+                            <option value="session">
+                                Session 
+                            </option>
+                            <option value="attendance">
+                                Attendance   
+                            </option>
+                        </datalist>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="label-box">
+                        <label>Attach File<sup class="required">*</sup> </label>
+                    </div>
+                    <div class="input-box">
+                        <div class="file">
+                            <label for="file">Attach File</label>
+                            <p>File(s) should be of max 50mb </p> 
+                        </div>
+                        <input type="file" class="text-input" id="file" name="file" multiple hidden>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="label-box">
+                        <label for="dob">Date of Birth<sup class="required">*</sup> </label>
+                    </div>
+                    <div class="input-box">
+                        <input type="date" class="text-input" id="dob" name="dob" placeholder="dd-mm-yyyy" min="1997-01-01" max="2030-12-31">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="label-box">
+                        <label for="age">Age<sup class="required">*</sup> </label>
+                    </div>
+                    <div class="input-box">
+                        <input type="range" min="0" max="100" class="text-input" id="age" name="age" step="10">
+                    </div>
+                </div>
+
+            </fieldset>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+</div>    
+
+<script src="script.js"></script>
+</body>
+</html>
