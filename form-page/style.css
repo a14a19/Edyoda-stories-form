@@ -62,6 +62,8 @@ header {
     background-color: #15294b;
     color: #fff;
     padding-top: 15px;
+    display: flex;
+    flex-direction: column;
 }
 .side-nav div {
     padding: 15px 10px;
@@ -183,10 +185,19 @@ input[type="submit"] {
     font-size: small;
 }
 .number::-webkit-outer-spin-button,.number::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     margin: 0;
 }
 .side-menu {
     background-color: #15294b;
 
+}   
+
+@media(max-width: 600px){
+    .side-nav{
+        display: none;
+    }
+    .form-containter{
+        width: 100%;
+    }
 }
